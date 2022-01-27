@@ -23,6 +23,21 @@ int power(int num, int pow)
     }
 }
 
+int power_iterative(int num, int pow)
+{
+    int res = 1;
+    while (pow)
+    {
+        if (pow & 1)
+        {
+            res *= num;
+        }
+        num *= num;
+        pow = pow >> 1;
+    }
+    return res;
+}
+
 int main (int argc, char *argv[])
 {
     int inp1;
@@ -30,5 +45,6 @@ int main (int argc, char *argv[])
     std::cin >> inp1;
     std::cin >> inp2;
     std::cout << power(inp1, inp2) << std::endl;
+    std::cout << power_iterative(inp1, inp2) << std::endl;
     return 0;
 }
