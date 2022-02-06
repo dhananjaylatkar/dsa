@@ -6,13 +6,13 @@ bool is_palindrome(int num)
     int tmp = num;
     while (tmp > 0)
     {
-        rev = (rev*10) + (tmp % 10);
-        tmp = tmp/10;
+        rev = (rev * 10) + (tmp % 10);
+        tmp = tmp / 10;
     }
     return (rev == num);
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int inp;
     std::cin >> inp;

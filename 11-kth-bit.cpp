@@ -1,19 +1,19 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 
 bool kth(int num, int k)
 {
-    if(num & (1 << (k-1))) return true;
+    if (num & (1 << (k - 1))) return true;
 
     return false;
 }
 bool kth_right(int num, int k)
 {
-    if((num >> (k-1)) & 1) return true;
+    if ((num >> (k - 1)) & 1) return true;
 
     return false;
 }
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int inp1;
     int inp2;

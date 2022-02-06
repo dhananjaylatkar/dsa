@@ -12,10 +12,9 @@ int cut_the_rope(int n, int a, int b, int c)
         return 0;
     }
 
-    int res = max(
-            max(cut_the_rope(n-a, a, b, c), cut_the_rope(n-b, a, b, c)),
-            cut_the_rope(n-c, a, b, c)
-            );
+    int res =
+        max(max(cut_the_rope(n - a, a, b, c), cut_the_rope(n - b, a, b, c)),
+            cut_the_rope(n - c, a, b, c));
 
     if (res == -1)
     {
@@ -24,7 +23,7 @@ int cut_the_rope(int n, int a, int b, int c)
     return res + 1;
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int n, a, b, c;
     cin >> n;

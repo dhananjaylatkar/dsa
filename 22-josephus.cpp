@@ -11,10 +11,10 @@ int josephus(int n, int k)
     {
         return 0;
     }
-    return (josephus(n-1, k) + k) % n;
+    return (josephus(n - 1, k) + k) % n;
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int n, k;
     cin >> n;

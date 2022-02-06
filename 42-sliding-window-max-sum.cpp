@@ -5,12 +5,11 @@ int maxSum(int arr[], int n, int k)
 {
     int curr_sum = 0;
 
-    for(int i = 0; i < k; i++)
-        curr_sum += arr[i];
+    for (int i = 0; i < k; i++) curr_sum += arr[i];
 
     int max_sum = curr_sum;
 
-    for(int i = k; i < n; i++)
+    for (int i = k; i < n; i++)
     {
         curr_sum += (arr[i] - arr[i - k]);
 
@@ -20,9 +19,9 @@ int maxSum(int arr[], int n, int k)
     return max_sum;
 }
 
-
-int main() {
+int main()
+{
     int arr[] = {1, 8, 30, -5, 20, 7}, n = 6, k = 3;
 
-    cout<<maxSum(arr, n, k);
+    cout << maxSum(arr, n, k);
 }

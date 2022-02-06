@@ -9,13 +9,12 @@ void toh(int n, char A, char B, char C)
         return;
     }
 
-    toh(n-1, A, C, B);
-    cout << "Move "<< n << " from " << A << " to " << C << endl;
-    toh(n-1, B, A, C);
-
+    toh(n - 1, A, C, B);
+    cout << "Move " << n << " from " << A << " to " << C << endl;
+    toh(n - 1, B, A, C);
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int n;
     cin >> n;

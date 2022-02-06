@@ -7,10 +7,10 @@ int sum_of_dig(int n)
     {
         return n;
     }
-    return n%10 + sum_of_dig(n/10);
+    return n % 10 + sum_of_dig(n / 10);
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int num;
     cin >> num;

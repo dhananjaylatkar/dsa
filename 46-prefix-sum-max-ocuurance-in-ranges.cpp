@@ -1,9 +1,9 @@
-#include <iostream>
-#include <cmath>
 #include <bits/stdc++.h>
-#include <climits>
-using namespace std;
 
+#include <climits>
+#include <cmath>
+#include <iostream>
+using namespace std;
 
 int maxOcc(int L[], int R[], int n)
 {
@@ -11,7 +11,7 @@ int maxOcc(int L[], int R[], int n)
 
     memset(arr, 0, sizeof(arr));
 
-    for(int i = 0; i < n; i++)
+    for (int i = 0; i < n; i++)
     {
         arr[L[i]]++;
 
@@ -20,11 +20,11 @@ int maxOcc(int L[], int R[], int n)
 
     int maxm = arr[0], res = 0;
 
-    for(int i = 1; i < 1000; i++)
+    for (int i = 1; i < 1000; i++)
     {
         arr[i] += arr[i - 1];
 
-        if(maxm < arr[i])
+        if (maxm < arr[i])
         {
             maxm = arr[i];
 
@@ -35,13 +35,9 @@ int maxOcc(int L[], int R[], int n)
     return res;
 }
 
-
-
-int main() {
-
+int main()
+{
     int L[] = {1, 2, 3}, R[] = {3, 5, 7}, n = 3;
 
-    cout<<maxOcc(L, R, n);
-
-
+    cout << maxOcc(L, R, n);
 }

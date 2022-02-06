@@ -20,11 +20,10 @@ void freq_sorted(int arr[], int n)
     }
     cout << curr << " " << freq << endl;
 }
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int n = 6;
     int arr[] = {10, 10, 10, 25, 30, 30};
     freq_sorted(arr, n);
     return 0;
 }
-

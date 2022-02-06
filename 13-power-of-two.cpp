@@ -6,9 +6,9 @@ bool power_2(int n)
     {
         return false;
     }
-    return ((n & (n-1)) == 0);
+    return ((n & (n - 1)) == 0);
 }
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int inp;
     cin >> inp;

@@ -8,9 +8,10 @@ int subset_sum(int arr[], int n, int sum)
         return (sum == 0) ? 1 : 0;
     }
 
-    return subset_sum(arr, n-1, sum) + subset_sum(arr, n-1, sum-arr[n-1]);
+    return subset_sum(arr, n - 1, sum) +
+           subset_sum(arr, n - 1, sum - arr[n - 1]);
 }
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int arr[] = {10, 20, 15};
     int n = 3;

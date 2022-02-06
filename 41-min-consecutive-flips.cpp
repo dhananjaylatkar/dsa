@@ -11,30 +11,30 @@ void min_flps(int arr[], int n)
     /* Always flip second group. */
     int to_flip = (arr[0] == 0) ? 1 : 0;
     bool start = true;
-    for (int i = 1; i < n; i++) {
+    for (int i = 1; i < n; i++)
+    {
         if (arr[i] == to_flip && start)
         {
-            cout << "From "<< i;
+            cout << "From " << i;
             start = false;
         }
         if (arr[i] != to_flip && !start)
         {
-            cout << " to " << i-1 << endl;
+            cout << " to " << i - 1 << endl;
             start = true;
         }
     }
     if (!start)
     {
-        cout << " to " << n-1 << endl;
+        cout << " to " << n - 1 << endl;
         start = true;
     }
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int n = 10;
     int arr[] = {1, 1, 0, 0, 0, 1, 0, 1, 0, 1};
     min_flps(arr, n);
     return 0;
 }
-

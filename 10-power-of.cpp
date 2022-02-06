@@ -11,9 +11,9 @@ int power(int num, int pow)
         return 1;
     }
 
-    int tmp = power(num, pow/2);
+    int tmp = power(num, pow / 2);
     tmp = tmp * tmp;
-    if (pow%2 == 0)
+    if (pow % 2 == 0)
     {
         return tmp;
     }
@@ -38,7 +38,7 @@ int power_iterative(int num, int pow)
     return res;
 }
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int inp1;
     int inp2;

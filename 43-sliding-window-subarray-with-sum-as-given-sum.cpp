@@ -1,5 +1,5 @@
 /* An efficient program to print subarray with sum as given sum */
-#include<stdio.h>
+#include <stdio.h>
 
 /* Returns true if the there is a subarray of arr[] with a sum equal to 'sum'
    otherwise returns false. Also, prints the result */
@@ -14,7 +14,7 @@ int subArraySum(int arr[], int n, int sum)
     for (i = 1; i <= n; i++)
     {
         // If curr_sum exceeds the sum, then remove the starting elements
-        while (curr_sum > sum && start < i-1)
+        while (curr_sum > sum && start < i - 1)
         {
             curr_sum = curr_sum - arr[start];
             start++;
@@ -23,13 +23,12 @@ int subArraySum(int arr[], int n, int sum)
         // If curr_sum becomes equal to sum, then return true
         if (curr_sum == sum)
         {
-            printf ("Sum found between indexes %d and %d", start, i-1);
+            printf("Sum found between indexes %d and %d", start, i - 1);
             return 1;
         }
 
         // Add this element to curr_sum
-        if (i < n)
-            curr_sum = curr_sum + arr[i];
+        if (i < n) curr_sum = curr_sum + arr[i];
     }
 
     // If we reach here, then no subarray
@@ -41,9 +40,8 @@ int subArraySum(int arr[], int n, int sum)
 int main()
 {
     int arr[] = {15, 2, 4, 8, 9, 5, 10, 23};
-    int n = sizeof(arr)/sizeof(arr[0]);
+    int n = sizeof(arr) / sizeof(arr[0]);
     int sum = 23;
     subArraySum(arr, n, sum);
     return 0;
 }
-

@@ -15,17 +15,17 @@ void prime_factors(int num)
         num = num / 3;
     }
 
-    for (int i = 5; i*i <= num; i+=6)
+    for (int i = 5; i * i <= num; i += 6)
     {
         while (num % i == 0)
         {
             std::cout << i << std::endl;
             num = num / i;
         }
-        while (num % (i+2) == 0)
+        while (num % (i + 2) == 0)
         {
-            std::cout << i+2 << std::endl;
-            num = num / (i+2);
+            std::cout << i + 2 << std::endl;
+            num = num / (i + 2);
         }
     }
 
@@ -39,7 +39,7 @@ void prime_factors_old(int num)
 {
     if (num <= 1) return;
 
-    for (int i = 2; i*i <= num; i++)
+    for (int i = 2; i * i <= num; i++)
     {
         while (num % i == 0)
         {
@@ -53,7 +53,7 @@ void prime_factors_old(int num)
         std::cout << num << std::endl;
     }
 }
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
     int inp;
     std::cin >> inp;
