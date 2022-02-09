@@ -1,5 +1,41 @@
 #include <bits/stdc++.h>
 using namespace std;
+vector<vector<int>> stockBuySell(vector<int> A, int n)
+{
+    vector<vector<int>> res;
+    vector<int> buy(n);
+    for (int i = 1; i < n; i++)
+    {
+        if (A[i] > A[i - 1])
+        {
+            buy[i - 1] = 1;
+        }
+    }
+    int i = 0;
+    while (i < n)
+    {
+        if (buy[i] == 1)
+        {
+            vector<int> tmp;
+            tmp.push_back(i);
+            // cout << i << " ";
+            i++;
+            while (buy[i] == 1)
+            {
+                i++;
+            }
+            // cout << i << "\n";
+            tmp.push_back(i);
+            res.push_back(tmp);
+        }
+        else
+        {
+            i++;
+        }
+    }
+
+    return res;
+}
 int stock_profit(int arr[], int n)
 {
     int profit = 0;
