@@ -14,7 +14,7 @@ int subArraySum(int arr[], int n, int sum)
     for (i = 1; i <= n; i++)
     {
         // If curr_sum exceeds the sum, then remove the starting elements
-        while (curr_sum > sum && start < i - 1)
+        while (curr_sum > sum && start <= i)
         {
             curr_sum = curr_sum - arr[start];
             start++;
