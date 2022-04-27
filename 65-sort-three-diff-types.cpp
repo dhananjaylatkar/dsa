@@ -23,8 +23,8 @@ void sort3(int arr[], int n)
         if (arr[mid] == 0)
         {
             swap(arr[low], arr[mid]);  // swap with low to make 0s on left side
-            mid++;                  // decrease mid window
-            low++;                  // increase low window
+            mid++;                     // decrease mid window
+            low++;                     // increase low window
         }
         else if (arr[mid] == 1)
         {

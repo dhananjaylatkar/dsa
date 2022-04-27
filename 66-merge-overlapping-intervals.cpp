@@ -5,7 +5,6 @@ struct Interval
 {
     int start;
     int end;
-
 };
 
 bool myComp(Interval i1, Interval i2) { return (i1.start <= i2.start); }
@@ -39,8 +38,7 @@ void mergeOverlapping(Interval arr[], int n)
 
 int main(int argc, char *argv[])
 {
-    Interval arr[] = {{5, 10}, {3, 15}, {18, 30},
-        {2, 7}};
+    Interval arr[] = {{5, 10}, {3, 15}, {18, 30}, {2, 7}};
     int n = 4;
     mergeOverlapping(arr, n);
     return 0;
