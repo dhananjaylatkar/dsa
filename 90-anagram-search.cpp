@@ -20,8 +20,8 @@ bool anagram(string s, string p)
 
     for (int i = 0; i < p.length(); i++)
     {
-        count_s[i]++;
-        count_p[i]++;
+        count_s[s[i]]++;
+        count_p[p[i]]++;
     }
 
     for (int i = p.length(); i < s.length(); i++)
@@ -30,8 +30,9 @@ bool anagram(string s, string p)
         // If count are do not match then
         // increase count of curr char and decrease
         // count of previous char in window.
-        count_s[i]++;
-        count_s[i - p.length()]--;
+        // Sliding Window
+        count_s[s[i]]++;
+        count_s[s[i - p.length()]]--;
     }
     return false;
 }
